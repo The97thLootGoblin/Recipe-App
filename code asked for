@@ -1,0 +1,9 @@
+var https = require('http');
+
+function onRequest(request, response) {
+	response.writeHead(200, {'Content-Type': 'text/plain'});//change plain to html for insertion
+	response.write('hello World');
+	response.end();
+
+}
+https.createServer(onRequest).listen(8231);
